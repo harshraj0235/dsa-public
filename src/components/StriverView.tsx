@@ -66,6 +66,74 @@ const StriverView = () => {
           ))}
         </div>
       </div>
+
+      {/* Add learntobasic.html content */}
+      <div className="bg-white shadow-md rounded-lg p-6 mb-6 border-l-4 border-green-500">
+        <h2 className="text-2xl font-semibold mb-4 text-green-600">Step 1: Learn the basics</h2>
+        <p className="text-gray-600 mb-4">0 / 31</p>
+        <div className="mb-4">
+          <h3 className="text-xl font-semibold mb-2 text-yellow-600">Lec 1: Things to Know in C++/Java/Python or any language</h3>
+          <p className="text-gray-600 mb-4">0 / 9</p>
+          <div className="overflow-x-auto">
+            <table className="min-w-full bg-white">
+              <thead>
+                <tr className="bg-green-100">
+                  <th className="py-2 px-4 text-left">Status</th>
+                  <th className="py-2 px-4 text-left">Problem</th>
+                  <th className="py-2 px-4 text-left">Solution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b">
+                  <td className="py-2 px-4">User Input / Output</td>
+                  <td className="py-2 px-4">Easy</td>
+                  <td className="py-2 px-4"><a href="#" className="bg-green-500 text-white px-4 py-2 rounded">Solution</a></td>
+                </tr>
+                <tr className="border-b">
+                  <td className="py-2 px-4">Data Types</td>
+                  <td className="py-2 px-4">Easy</td>
+                  <td className="py-2 px-4"><a href="#" className="bg-green-500 text-white px-4 py-2 rounded">Solution</a></td>
+                </tr>
+                <tr className="border-b">
+                  <td className="py-2 px-4">If Else statements</td>
+                  <td className="py-2 px-4">Easy</td>
+                  <td className="py-2 px-4"><a href="#" className="bg-green-500 text-white px-4 py-2 rounded">Solution</a></td>
+                </tr>
+                <tr className="border-b">
+                  <td className="py-2 px-4">Switch Statement</td>
+                  <td className="py-2 px-4">Easy</td>
+                  <td className="py-2 px-4"><a href="#" className="bg-green-500 text-white px-4 py-2 rounded">Solution</a></td>
+                </tr>
+                <tr className="border-b">
+                  <td className="py-2 px-4">What are arrays, strings?</td>
+                  <td className="py-2 px-4">Easy</td>
+                  <td className="py-2 px-4"><a href="#" className="bg-green-500 text-white px-4 py-2 rounded">Solution</a></td>
+                </tr>
+                <tr className="border-b">
+                  <td className="py-2 px-4">For loops</td>
+                  <td className="py-2 px-4">Easy</td>
+                  <td className="py-2 px-4"><a href="#" className="bg-green-500 text-white px-4 py-2 rounded">Solution</a></td>
+                </tr>
+                <tr className="border-b">
+                  <td className="py-2 px-4">While loops</td>
+                  <td className="py-2 px-4">Easy</td>
+                  <td className="py-2 px-4"><a href="#" className="bg-green-500 text-white px-4 py-2 rounded">Solution</a></td>
+                </tr>
+                <tr className="border-b">
+                  <td className="py-2 px-4">Functions (Pass by Reference and Value)</td>
+                  <td className="py-2 px-4">Easy</td>
+                  <td className="py-2 px-4"><a href="#" className="bg-green-500 text-white px-4 py-2 rounded">Solution</a></td>
+                </tr>
+                <tr className="border-b">
+                  <td className="py-2 px-4">Time Complexity [Learn Basics, and then analyse in next Steps]</td>
+                  <td className="py-2 px-4">Easy</td>
+                  <td className="py-2 px-4"><a href="#" className="bg-green-500 text-white px-4 py-2 rounded">Solution</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

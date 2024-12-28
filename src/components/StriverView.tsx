@@ -54,6 +54,14 @@ const StriverView = () => {
               <div className="w-full bg-gray-200 rounded-full h-1.5 mt-2">
                 <div className="bg-green-600 h-1.5 rounded-full" style={{ width: '0%' }}></div>
               </div>
+              <a
+                href="https://example.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 px-4 py-2 text-white bg-green-600 rounded font-bold text-center hover:bg-green-700"
+              >
+                Start
+              </a>
             </div>
           ))}
         </div>

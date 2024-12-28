@@ -1,7 +1,7 @@
 import React from 'react';
 
 const steps = [
-  { title: "Learn the basics", count: 31, link: "./learntobasic.html" },
+  { title: "Learn the basics", count: 31, link: "./learntobasic.html" }, // Link to the HTML file
   { title: "Learn Important Sorting Techniques", count: 7 },
   { title: "Solve Problems on Arrays", count: 40 },
   { title: "Binary Search", count: 32 },
@@ -55,7 +55,7 @@ const StriverView = () => {
                 <div className="bg-green-600 h-1.5 rounded-full" style={{ width: '0%' }}></div>
               </div>
               <a
-                href={step.link ? step.link : "https://example.com"}
+                href={step.link ? step.link : "https://example.com"} // Defaults to example link if no `link` provided
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block mt-4 px-4 py-2 text-white bg-green-600 rounded font-bold text-center hover:bg-green-700"

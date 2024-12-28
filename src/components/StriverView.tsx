@@ -1,8 +1,7 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 
 const steps = [
-  { title: "Learn the basics", count: 31, link: "/learn-the-basics" }, // Link to the new page
+  { title: "Learn the basics", count: 31, link: "/learntobasic.html" }, // Link to the HTML file
   { title: "Learn Important Sorting Techniques", count: 7 },
   { title: "Solve Problems on Arrays", count: 40 },
   { title: "Binary Search", count: 32 },
@@ -23,16 +22,6 @@ const steps = [
 ];
 
 const StriverView = () => {
-  const history = useHistory();
-
-  const handleStartClick = (stepTitle) => {
-    if (stepTitle === "Learn the basics") {
-      history.push("/learn-the-basics");
-    } else {
-      window.open(steps.find(step => step.title === stepTitle).link, '_blank');
-    }
-  };
-
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="bg-green-50 p-6 rounded-xl mb-8">
@@ -65,12 +54,14 @@ const StriverView = () => {
               <div className="w-full bg-gray-200 rounded-full h-1.5 mt-2">
                 <div className="bg-green-600 h-1.5 rounded-full" style={{ width: '0%' }}></div>
               </div>
-              <button
-                onClick={() => handleStartClick(step.title)}
+              <a
+                href={step.link ? step.link : "https://example.com"} // Defaults to example link if no `link` provided
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block mt-4 px-4 py-2 text-white bg-green-600 rounded font-bold text-center hover:bg-green-700"
               >
                 Start
-              </button>
+              </a>
             </div>
           ))}
         </div>

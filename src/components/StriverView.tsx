@@ -55,7 +55,7 @@ const StriverView = () => {
                 <div className="bg-green-600 h-1.5 rounded-full" style={{ width: '0%' }}></div>
               </div>
               <a
-                href={step.link ? step.link : "https://example.com"} // Defaults to example link if no `link` provided
+                href={step.link || "/learntobasic.html"} // Defaults to learntobasic.html if no `link` provided
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block mt-4 px-4 py-2 text-white bg-green-600 rounded font-bold text-center hover:bg-green-700"

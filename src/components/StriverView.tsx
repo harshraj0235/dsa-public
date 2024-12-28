@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 const steps = [
-  { title: "Learn the basics", count: 31, link: "/learntobasic.html" }, // Link to the HTML file
+  { title: "Learn the basics", count: 31, link: "/learn-the-basics" }, // Link to the new page
   { title: "Learn Important Sorting Techniques", count: 7 },
   { title: "Solve Problems on Arrays", count: 40 },
   { title: "Binary Search", count: 32 },
@@ -22,11 +23,11 @@ const steps = [
 ];
 
 const StriverView = () => {
-  const [activeStep, setActiveStep] = useState(null);
+  const history = useHistory();
 
   const handleStartClick = (stepTitle) => {
     if (stepTitle === "Learn the basics") {
-      setActiveStep(stepTitle);
+      history.push("/learn-the-basics");
     } else {
       window.open(steps.find(step => step.title === stepTitle).link, '_blank');
     }
@@ -74,75 +75,6 @@ const StriverView = () => {
           ))}
         </div>
       </div>
-
-      {activeStep === "Learn the basics" && (
-        <div className="bg-white shadow-md rounded-lg p-6 mb-6 border-l-4 border-green-500">
-          <h2 className="text-2xl font-semibold mb-4 text-green-600">Step 1: Learn the basics</h2>
-          <p className="text-gray-600 mb-4">0 / 31</p>
-          <div className="mb-4">
-            <h3 className="text-xl font-semibold mb-2 text-yellow-600">Lec 1: Things to Know in C++/Java/Python or any language</h3>
-            <p className="text-gray-600 mb-4">0 / 9</p>
-            <div className="overflow-x-auto">
-              <table className="min-w-full bg-white">
-                <thead>
-                  <tr className="bg-green-100">
-                    <th className="py-2 px-4 text-left">Status</th>
-                    <th className="py-2 px-4 text-left">Problem</th>
-                    <th className="py-2 px-4 text-left">Solution</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b">
-                    <td className="py-2 px-4">User Input / Output</td>
-                    <td className="py-2 px-4">Easy</td>
-                    <td className="py-2 px-4"><a href="#" className="bg-green-500 text-white px-4 py-2 rounded">Solution</a></td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="py-2 px-4">Data Types</td>
-                    <td className="py-2 px-4">Easy</td>
-                    <td className="py-2 px-4"><a href="#" className="bg-green-500 text-white px-4 py-2 rounded">Solution</a></td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="py-2 px-4">If Else statements</td>
-                    <td className="py-2 px-4">Easy</td>
-                    <td className="py-2 px-4"><a href="#" className="bg-green-500 text-white px-4 py-2 rounded">Solution</a></td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="py-2 px-4">Switch Statement</td>
-                    <td className="py-2 px-4">Easy</td>
-                    <td className="py-2 px-4"><a href="#" className="bg-green-500 text-white px-4 py-2 rounded">Solution</a></td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="py-2 px-4">What are arrays, strings?</td>
-                    <td className="py-2 px-4">Easy</td>
-                    <td className="py-2 px-4"><a href="#" className="bg-green-500 text-white px-4 py-2 rounded">Solution</a></td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="py-2 px-4">For loops</td>
-                    <td className="py-2 px-4">Easy</td>
-                    <td className="py-2 px-4"><a href="#" className="bg-green-500 text-white px-4 py-2 rounded">Solution</a></td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="py-2 px-4">While loops</td>
-                    <td className="py-2 px-4">Easy</td>
-                    <td className="py-2 px-4"><a href="#" className="bg-green-500 text-white px-4 py-2 rounded">Solution</a></td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="py-2 px-4">Functions (Pass by Reference and Value)</td>
-                    <td className="py-2 px-4">Easy</td>
-                    <td className="py-2 px-4"><a href="#" className="bg-green-500 text-white px-4 py-2 rounded">Solution</a></td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="py-2 px-4">Time Complexity [Learn Basics, and then analyse in next Steps]</td>
-                    <td className="py-2 px-4">Easy</td>
-                    <td className="py-2 px-4"><a href="#" className="bg-green-500 text-white px-4 py-2 rounded">Solution</a></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

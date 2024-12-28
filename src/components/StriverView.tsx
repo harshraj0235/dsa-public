@@ -1,7 +1,7 @@
 import React from 'react';
 
 const steps = [
-  { title: "Learn the basics", count: 31, link: "src/components/learnbasic.html" },
+  { title: "Learn the basics", count: 31, link: "https://github.com/harshraj0235/dsa-public/blob/main/learntobasic.html" },
   { title: "Learn Important Sorting Techniques", count: 7 },
   { title: "Solve Problems on Arrays", count: 40 },
   { title: "Binary Search", count: 32 },

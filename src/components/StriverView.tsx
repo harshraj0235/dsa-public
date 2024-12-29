@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const steps = [
   { title: "Learn the basics", count: 31, link: '/learntobasic.html' },
@@ -22,6 +22,16 @@ const steps = [
 ];
 
 const StriverView = () => {
+  const [selectedStep, setSelectedStep] = useState(null);
+
+  const handleStepClick = (index) => {
+    setSelectedStep(index);
+  };
+
+  const handleStartClick = (link) => {
+    window.location.href = link;
+  };
+
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="bg-green-50 p-6 rounded-xl mb-8">
@@ -46,16 +56,29 @@ const StriverView = () => {
 
         <div className="grid gap-4">
           {steps.map((step, index) => (
-            <div key={index} className="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
+            <div 
+              key={index} 
+              className="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow"
+              onClick={() => handleStepClick(index)}
+            >
               <div className="flex justify-between items-center">
-                <h3 className="font-medium text-gray-800">
-                  Step {index + 1}: {step.title}
-                </h3>
+                <h3 className="font-medium text-gray-800">Step {index + 1}: {step.title}</h3>
                 <span className="text-sm text-gray-500">0/{step.count}</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-1.5 mt-2">
                 <div className="bg-green-600 h-1.5 rounded-full" style={{ width: '0%' }}></div>
               </div>
+              {selectedStep === index && step.link && (
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleStartClick(step.link);
+                  }}
+                  className="inline-block mt-4 px-4 py-2 text-white bg-green-600 rounded font-bold text-center hover:bg-green-700"
+                >
+                  Start
+                </button>
+              )}
             </div>
           ))}
         </div>

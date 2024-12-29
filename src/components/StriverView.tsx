@@ -1,7 +1,7 @@
 import React from 'react';
 
 const steps = [
-  { title: "Learn the basics", count: 31, link: 'src/components/learnbasic.html' }, // Link to the HTML file
+  { title: "Learn the basics", count: 31, link: '/learntobasic.html' },
   { title: "Learn Important Sorting Techniques", count: 7 },
   { title: "Solve Problems on Arrays", count: 40 },
   { title: "Binary Search", count: 32 },
@@ -22,10 +22,6 @@ const steps = [
 ];
 
 const StriverView = () => {
-  const handleStartClick = (link) => {
-    window.location.href = link;
-  };
-
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="bg-green-50 p-6 rounded-xl mb-8">
@@ -52,18 +48,14 @@ const StriverView = () => {
           {steps.map((step, index) => (
             <div key={index} className="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
               <div className="flex justify-between items-center">
-                <h3 className="font-medium text-gray-800">Step {index + 1}: {step.title}</h3>
+                <h3 className="font-medium text-gray-800">
+                  Step {index + 1}: {step.title}
+                </h3>
                 <span className="text-sm text-gray-500">0/{step.count}</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-1.5 mt-2">
                 <div className="bg-green-600 h-1.5 rounded-full" style={{ width: '0%' }}></div>
               </div>
-              <button
-                onClick={() => handleStartClick(step.link)}
-                className="inline-block mt-4 px-4 py-2 text-white bg-green-600 rounded font-bold text-center hover:bg-green-700"
-              >
-                Start
-              </button>
             </div>
           ))}
         </div>
